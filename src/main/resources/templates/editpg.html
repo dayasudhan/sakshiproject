@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <div th:replace="/fragments/header :: header"/>
+</head>
+<body>
+	<div align="center">
+		<h1>Edit Form</h1>
+		<form th:action="@{/edit}" th:object="${pg}" method="POST">
+			<table>
+				<tr>
+					<td>occu Name</td>
+					<td><input type="text" th:field="*{occupation}"
+						name="occupation" /></td>
+						<td><input type="hidden" th:field="*{id}"
+						name="id" /></td>
+				</tr>
+				
+	
+
+			</table>
+			<input type="submit" value="Update" />
+		</form>
+	</div>
+</body>
+</html>
+
